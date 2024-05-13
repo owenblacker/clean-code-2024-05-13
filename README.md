@@ -1,4 +1,10 @@
-Created using...
+# Using the Project
+
+Run tests using `npm test`
+
+# History
+
+Ben's original repo was created using...
 
 `npm init -y`
 
@@ -7,11 +13,7 @@ Created using...
 ...And then editing `package.json` to change the `test` block to...
 
 ```json
-  "scripts": {
-    "test": "jest"
-  },
-  ```
-
-# Using the Project
-
-Run tests using `npm test`
+"scripts": {
+  "test": "jest"
+},
+```
