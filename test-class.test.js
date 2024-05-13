@@ -34,7 +34,7 @@ describe('Test instance equivalence', () => {
 describe('Test coin flip versus dice evens', () => {
     test('Coin flip equals dice evens', () => {
         let diceIs2 = diceIs4 = diceIs6 = new Probability(1.0 / 6.0);
-        let diceIsEvens = diceIs2.or(diceIs4).or(diceIs6);
+        let diceIsEvens = diceIs2.xor(diceIs4).xor(diceIs6);
 
         let coinIsHeads = new Probability(0.5);
 
@@ -43,7 +43,7 @@ describe('Test coin flip versus dice evens', () => {
 
     test('Coin flip equals dice 1 or 2', () => {
         let diceIs1 = diceIs2 = new Probability(1.0 / 6.0);
-        let diceIsOneOrTwo = diceIs1.or(diceIs2);
+        let diceIsOneOrTwo = diceIs1.xor(diceIs2);
 
         let coinIsHeads = new Probability(0.5);
 
