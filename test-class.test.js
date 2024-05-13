@@ -49,10 +49,20 @@ describe('Test coin flip versus dice evens', () => {
 
         expect( diceIsOneOrTwo.equals(coinIsHeads) ).toBe(false);
     })
-}
-)
+})
 
-// 
-// 
-// 
+describe('Test and functionality', () => {
+    test('1/5 and 1/5 == 1/25', () => {
+        let fifth = new Probability(1.0 / 5.0);
+        let twentyfifth = new Probability(1.0 / 25.0);
 
+        expect( fifth.and(fifth).equals(twentyfifth) ).toBe(true);
+    })
+
+    test('1/500 and 1/500 == 1/250000', () => {
+        let fifth = new Probability(1.0 / 500.0);
+        let twentyfifth = new Probability(1.0 / 250000.0);
+
+        expect( fifth.and(fifth).equals(twentyfifth) ).toBe(true);
+    })
+})
